@@ -8,7 +8,10 @@ terraform {
   }
 }
 
-provider "aws" {}
+provider "aws" {
+  region = "us-east-2"
+}
+
 
 module "tfc-dynamic-creds-provider" {
   source = "hashi-strawb/tfc-dynamic-creds-provider/aws"
